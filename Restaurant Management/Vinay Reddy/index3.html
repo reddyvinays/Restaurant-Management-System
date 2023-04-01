@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurent App</title>
+    <link rel="stylesheet" href="css3.css">
+    
+</head>
+<body>
+    <div class="conatiner">
+        <div class="left-column">
+          <h2 class="heading" >TABLE</h2>
+          <div class="search-container">
+            <input type="text" id="table-search" onkeyup="filterTables()" placeholder="Search Tables">
+          </div>
+          <div class="scroll-y table-cards"> 
+              <div class="table-card" attr-key="0">
+                  <h1 class="table-1-head" attr-key="0">Table 1
+                  </h1>
+                  <p class="table-1-para" attr-key="0">
+                      Total Cost: 
+                      <span id="total-cost" attr-key="0" >0</span>
+                      Total Items:
+                      <span id="total-items" attr-key="0">0</span>
+                  </p>
+              </div>
+              <div class="table-card" attr-key="1">
+                  <h1 class="table-1-head" attr-key="1">Table 2
+                  </h1>
+                  <p class="table-1-para" attr-key="1">
+                      Total Cost: 
+                      <span id="total-cost" attr-key="1" >0</span>
+                      Total Items:
+                      <span id="total-items" attr-key="1">0</span>
+                  </p>
+              </div>
+              <div class="table-card" attr-key="2">
+                  <h1 class="table-1-head" attr-key="2">Table 3
+                  </h1>
+                  <p class="table-1-para" attr-key="2">
+                     Total Cost: 
+                      <span id="total-cost" attr-key="2">0</span>
+                      Total Items:
+                      <span id="total-items" attr-key="2">0</span>
+                  </p>
+              </div>
+          </div>
+        </div>
+        <div class="column-divider"></div>          
+        <div class="right-column">
+          <h2 class="heading">MENU</h2>
+          <div class="search-container">
+            <div class="search-bar">
+            <input class="search" type="text" id="menu-search" onkeyup="filterMenu()" placeholder="Search Menu..By course,By food">
+          </div>
+          <!-- <button class="create-menu-item">add</button> -->
+        </div>
+        <div class="Scrool-y menu-cards">
+            <div class="menu-card" draggable="true" attr-key="0" data-item-cost="90" data-item-type="juices">
+                <h2 attr-key="0">Apple Juices</h2>
+                <p attr-key="0">
+                    "Item cost: "
+                    <span id="total-cost" attr-key="0">90</span>
+                </p>
+                <p attr-key="0">
+                    "Item type: "
+                    <span id="item-type" attr-key="0">juices</span>
+                </p>
+            </div>
+            <div class="menu-card" draggable="true" attr-key="1" data-item-cost="80" data-item-type="juices">
+                <h2 attr-key="1">WaterMelon Juice</h2>
+                <p attr-key="1">
+                    "Item cost: "
+                    <span id="total-cost" attr-key="1">80</span>
+                </p>
+                <p attr-key="1">
+                    "Item type: "
+                    <span id="item-type" attr-key="1">juices</span>
+                </p>
+            </div>
+            <div class="menu-card" draggable="true" attr-key="2" data-item-cost="100" data-item-type="juices">
+                <h2 attr-key="2">Mango Juice</h2>
+                <p attr-key="2">
+                    "Item cost: "
+                    <span id="total-cost" attr-key="2">100</span>
+                </p>
+                <p attr-key="2">
+                    "Item type: "
+                    <span id="item-type" attr-key="2">juices</span>
+                </p>
+            </div>
+            <div class="menu-card" draggable="true" attr-key="3" data-item-cost="20" data-item-type="beverages">
+                <!-- <button class="delete delete-btn" attr-key="1">
+                    <span class="show-delete" attr-key="1">delete</span>
+                </button> -->
+                <h2 attr-key="3">Thumbs Up</h2>
+                <p attr-key="3">
+                    "Item cost: "
+                    <span id="total-cost" attr-key="3">20</span>
+                </p>
+                <p attr-key="3">
+                    "Item type: "
+                    <span id="item-type" attr-key="3">beverages</span>
+                </p>
+            </div>
+            <div class="menu-card" draggable="true" attr-key="4" data-item-cost="20" data-item-type="beverages">
+                <!-- <button class="delete delete-btn" attr-key="1">
+                    <span class="show-delete" attr-key="1">delete</span>
+                </button> -->
+                <h2 attr-key="4">Sting</h2>
+                <p attr-key="4">
+                    "Item cost: "
+                    <span id="total-cost" attr-key="4">20</span>
+                </p>
+                <p attr-key="4">
+                    "Item type: "
+                    <span id="item-type" attr-key="4">beverages</span>
+                </p>
+            </div>
+            <div class="menu-card" draggable="true" attr-key="5" data-item-cost="20" data-item-type="beverages">
+                <!-- <button class="delete delete-btn" attr-key="1">
+                    <span class="show-delete" attr-key="1">delete</span>
+                </button> -->
+                <h2 attr-key="5">Sprite</h2>
+                <p attr-key="5">
+                    "Item cost: "
+                    <span id="total-cost" attr-key="5">20</span>
+                </p>
+                <p attr-key="5">
+                    "Item type: "
+                    <span id="item-type" attr-key="5">beverages</span>
+                </p>
+            </div>
+            <div class="menu-card" draggable="true" attr-key="6" data-item-cost="220" data-item-type="Biryani">
+                <!-- <button class="delete delete-btn" attr-key="1">
+                    <span class="show-delete" attr-key="1">delete</span>
+                </button> -->
+                <h2 attr-key="6">Veg biryani</h2>
+                <p attr-key="6">
+                    "Item cost: "
+                    <span id="total-cost" attr-key="6">220</span>
+                </p>
+                <p attr-key="6">
+                    "Item type: "
+                    <span id="item-type" attr-key="6">Biryani</span>
+                </p>
+            </div>
+            <div class="menu-card" draggable="true" attr-key="7" data-item-cost="200" data-item-type="Biryani">
+                <!-- <button class="delete delete-btn" attr-key="1">
+                    <span class="show-delete" attr-key="1">delete</span>
+                </button> -->
+                <h2 attr-key="7">Chicken Biryani</h2>
+                <p attr-key="7">
+                    "Item cost: "
+                    <span id="total-cost" attr-key="7">200</span>
+                </p>
+                <p attr-key="7">
+                    "Item type: "
+                    <span id="item-type" attr-key="7">Biryani</span>
+                </p>
+            </div>
+            <div class="menu-card" draggable="true" attr-key="8" data-item-cost="190" data-item-type="Biryani">
+                <!-- <button class="delete delete-btn" attr-key="1">
+                    <span class="show-delete" attr-key="1">delete</span>
+                </button> -->
+                <h2 attr-key="8">Mushroom Biryani</h2>
+                <p attr-key="8">
+                    "Item cost: "
+                    <span id="total-cost" attr-key="8">190</span>
+                </p>
+                <p attr-key="8">
+                    "Item type: "
+                    <span id="item-type" attr-key="8">Biryani</span>
+                </p>
+            </div>
+            <div class="menu-card" draggable="true" attr-key="9" data-item-cost="50" data-item-type="Desserts">
+                <!-- <button class="delete delete-btn" attr-key="1">
+                    <span class="show-delete" attr-key="1">delete</span>
+                </button> -->
+                <h2 attr-key="9">Gulab Jamun</h2>
+                <p attr-key="9">
+                    "Item cost: "
+                    <span id="total-cost" attr-key="9">50</span>
+                </p>
+                <p attr-key="9">
+                    "Item type: "
+                    <span id="item-type" attr-key="9">Desserts</span>
+                </p>
+            </div>
+            <div class="menu-card" draggable="true" attr-key="10" data-item-cost="120" data-item-type="Desserts">
+                <!-- <button class="delete delete-btn" attr-key="1">
+                    <span class="show-delete" attr-key="1">delete</span>
+                </button> -->
+                <h2 attr-key="10">Rasagulla</h2>
+                <p attr-key="10">
+                    "Item cost: "
+                    <span id="total-cost" attr-key="10">120</span>
+                </p>
+                <p attr-key="10">
+                    "Item type: "
+                    <span id="item-type" attr-key="10">Desserts</span>
+                </p>
+            </div>
+            <div class="menu-card" draggable="true" attr-key="11" data-item-cost="15" data-item-type="Starter">
+                <!-- <button class="delete delete-btn" attr-key="1">
+                    <span class="show-delete" attr-key="1">delete</span>
+                </button> -->
+                <h2 attr-key="11">Lemon Juice</h2>
+                <p attr-key="11">
+                    "Item cost: "
+                    <span id="total-cost" attr-key="11">15</span>
+                </p>
+                <p attr-key="11">
+                    "Item type: "
+                    <span id="item-type" attr-key="11">starter</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script src="app3.js">  defer</script>
+</body>
+</html>
